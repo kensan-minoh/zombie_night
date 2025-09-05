@@ -14,29 +14,29 @@ class Game:
         print(self.tile_images)
         self.platform_group = platform_group
         self.player_group = player_group
-
+        # tile map size is 23 rows and 40 columns
         self.tile_map = [
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'P', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [4, 4, 4, 4, 4, 4, 4 ,4, 4, 4, 4, 4, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 4, 4, 4 ,4, 4, 4, 4, 4],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 4 ,4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [4 ,4, 4, 4, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [4, 4, 4, 4, 4, 4, 4, 4 ,4, 4, 4, 4, 4, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 4, 4, 4, 4 ,4, 4, 4, 4, 4, 4, 4],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [1, 0, 'P', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         ]
@@ -51,8 +51,14 @@ class Game:
                     Tiles(self.tile_images[0], 32 * j, 32 * i, self.platform_group)
                 if self.tile_map[i][j] == 2:
                     Tiles(self.tile_images[1], 32 * j, 32 * i, self.platform_group)
+                if self.tile_map[i][j] == 3:
+                    Tiles(self.tile_images[2], 32 * j, 32 * i, self.platform_group)
+                if self.tile_map[i][j] == 4:
+                    Tiles(self.tile_images[3], 32 * j, 32 * i, self.platform_group)
+                if self.tile_map[i][j] == 5:
+                    Tiles(self.tile_images[4], 32 * j, 32 * i, self.platform_group)
                 if self.tile_map[i][j] == 'P':
-                    self.player = Player(32 * j, 32 * i - 32, self.player_group)
+                    self.player = Player(32 * j, 32 * i - 32, self.platform_group, self.player_group)
 
     def openning_messege(self):
         self.title = self.message_font.render('Zombie Knight', True, 'green')
@@ -79,33 +85,73 @@ class Tiles(pygame.sprite.Sprite):
         super().__init__(groups)
         self.image = image
         self.rect = self.image.get_rect(topleft=(x, y))
+        self.mask = pygame.mask.from_surface(self.image)
 
 class Player(pygame.sprite.Sprite):
-        def __init__(self, x, y, groups):
+        def __init__(self, x, y, platform_group, groups):
             super().__init__(groups)
 
             self.player_idle_animation = [pygame.transform.scale(pygame.image.load(f'images/player/idle/Idle ({n+1}).png').convert_alpha(), (64, 64)) for n in range(10)]
             self.player_attack_animation = [pygame.transform.scale(pygame.image.load(f'images/player/attack/Attack ({n+1}).png').convert_alpha(), (64, 64)) for n in range(10)]
             self.player_jump_animation = [pygame.transform.scale(pygame.image.load(f'images/player/jump/Jump ({n+1}).png').convert_alpha(), (64, 64)) for n in range(10)]
-            self.player_run_animation = [pygame.transform.scale(pygame.image.load(f'images/player/run/Run ({n+1}).png').convert_alpha(), (64, 64)) for n in range(10)]
+            self.player_run_animation_right = [pygame.transform.scale(pygame.image.load(f'images/player/run/Run ({n+1}).png').convert_alpha(), (64, 64)) for n in range(10)]
+            self.player_run_animation_left = [pygame.transform.flip(image, True, False) for image in self.player_run_animation_right]
 
             self.image = self.player_idle_animation[0]
             self.rect = self.image.get_rect(topleft=(x, y))
+            self.mask = pygame.mask.from_surface(self.image)
+
+            self.animation_number = 0
+            self.animation_sprite = self.player_run_animation_left
 
             # kinematic constants
             self.HORIZONTAL_ACCELERATION = 0.5
             self.HORIZONTAL_FRICTION = 0.05
-            self.VERTICAL_ACCELERATION = 0.0
-            self.VERTICAL_JUMP_SPEED = 15.0
+            self.VERTICAL_ACCELERATION = 0.5
+            self.VERTICAL_JUMP_SPEED = 13.5
 
             # kinematic initial values
             self.position = Vector2(x, y)
             self.velocity = Vector2(0, 0)
             self.acceleration = Vector2(0, self.VERTICAL_ACCELERATION)
 
+            self.is_grounded = False
+            self.platform_group = platform_group
+
         def update(self):
             self.move()
+            self.animation()
+            self.check_status()
+
+        def animation(self):
+            self.animation_number += 0.2
+            if self.animation_number >= len(self.animation_sprite):
+                self.animation_number = 0
+            else:
+                self.image = self.animation_sprite[int(self.animation_number)]
+
+        def jump(self):
+            if self.is_grounded:
+                self.velocity.y = -1 * self.VERTICAL_JUMP_SPEED
+
+        def check_status(self):
+
+            collided_platform = pygame.sprite.spritecollideany(self, self.platform_group,pygame.sprite.collide_mask)
+            if collided_platform:
+                if self.velocity.y > 0:
+                    self.is_grounded = True
+                    self.velocity.y = 0
+                    self.position.y = collided_platform.rect.top - 58
+                elif self.velocity.y < 0:
+                
+                    self.velocity.y = 0
+                    self.position.y = collided_platform.rect.bottom
+
+            else:
+                self.is_grounded = False
         
+
+
         def move(self):
             keys = pygame.key.get_pressed()
             if keys[pygame.K_RIGHT]:
@@ -145,6 +191,8 @@ platform_group = pygame.sprite.Group()
 player_group = pygame.sprite.Group()
 
 my_game = Game(player_group, platform_group)
+my_player = my_game.player
+
 
 # main game loop
 running = True
@@ -153,6 +201,11 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+
+        if event.type == pygame.KEYDOWN:
+            if event.key ==pygame.K_SPACE:
+                my_player.jump()
+
 
     # fill the background
     display_surface.blit(background_image, background_rect)
